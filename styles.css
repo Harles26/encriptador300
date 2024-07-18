@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #c9dffe3d;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+}
+
+.input-section, .output-section {
+    width: 48%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+.logo{
+    width: 10%;
+}
+#inputText{
+    height: 420px;
+    background-color: #c9dffe00;
+}
+#outputText{
+    width: auto;
+    background-color: #c9dffe00;
+}
+.output-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: #333;
+    width: 35%;
+    padding: 1rem;
+}
+.output-section p {
+    height: 500px;
+}
+.mensaje{
+  
+    height: 100%;
+}
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    resize: none;
+    background-color: #c9dffe00;
+
+}
+.button1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+button {
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+}
+
+#encryptButton {
+    background-color: #007bff;
+    color: white;
+    margin-right: 10px;
+}
+
+#decryptButton {
+    background-color: #6c757d;
+    color: white;
+}
+
+#copyButton {
+    background-color: #28a745;
+    color: white;
+    display: block;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.input-section, .output-section {
+    width: 45%;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+}
+
+#inputHint {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#encryptButton {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+#decryptButton {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.output-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mensaje img {
+    max-width: 100%;
+    height: auto;
+}
+
+#outputText {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+#copyButton {
+    margin-top: 10px;
+    background-color: #28a745;
+    color: #fff;
+}
+
+        align-items: center;
+    }
+    
+    .input-section, .output-section {
+        width: 100%;
+    }
+    
+    .buttons {
+        flex-direction: column;
+    }
+    
+    button {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
