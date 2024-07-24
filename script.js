@@ -1,37 +1,23 @@
-document.getElementById('inputText').addEventListener('input', () => {
-    normalizeInput();
-});
-
 document.getElementById('encryptButton').addEventListener('click', () => {
-    const inputText = document.getElementById('inputText').value;
-    if (inputText.trim() === "") {
-        document.getElementById('outputText').innerText = "Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar.";
-        document.getElementById('copyButton').style.display = "none";
-        document.getElementById('mensaje').style.display = "block";
+    const inputText = document.getElementById('inputText').value.trim();
+    if (inputText === "") {
+        showMessage("Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar.");
     } else {
-        const encryptedText = btoa(inputText); 
-        document.getElementById('outputText').innerText = encryptedText;
-        document.getElementById('copyButton').style.display = "block";
-        document.getElementById('mensaje').style.display = "none";
+        const encryptedText = btoa(inputText);
+        showOutput(encryptedText);
     }
 });
 
 document.getElementById('decryptButton').addEventListener('click', () => {
-    const inputText = document.getElementById('inputText').value;
-    if (inputText.trim() === "") {
-        document.getElementById('outputText').innerText = "Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar.";
-        document.getElementById('copyButton').style.display = "none";
-        document.getElementById('mensaje').style.display = "block";
+    const inputText = document.getElementById('inputText').value.trim();
+    if (inputText === "") {
+        showMessage("Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar.");
     } else {
         try {
             const decryptedText = atob(inputText);
-            document.getElementById('outputText').innerText = decryptedText;
-            document.getElementById('copyButton').style.display = "block";
-            document.getElementById('mensaje').style.display = "none";
+            showOutput(decryptedText);
         } catch (error) {
-            document.getElementById('outputText').innerText = "Error al desencriptar el texto.";
-            document.getElementById('copyButton').style.display = "none";
-            document.getElementById('mensaje').style.display = "block";
+            showMessage("Error al desencriptar el texto.");
         }
     }
 });
@@ -43,10 +29,14 @@ document.getElementById('copyButton').addEventListener('click', () => {
     });
 });
 
-function normalizeInput() {
-    const inputText = document.getElementById('inputText');
-    inputText.value = inputText.value
-        .toLowerCase()
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '');
+function showMessage(message) {
+    document.getElementById('outputText').innerText = message;
+    document.getElementById('copyButton').style.display = "none";
+    document.getElementById('mensaje').style.display = "block"; // Mostrar la imagen
+}
+
+function showOutput(output) {
+    document.getElementById('outputText').innerText = output;
+    document.getElementById('copyButton').style.display = "block";
+    document.getElementById('mensaje').style.display = "none"; // Ocultar la imagen
 }
