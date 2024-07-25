@@ -32,11 +32,11 @@ document.getElementById('copyButton').addEventListener('click', () => {
 function showMessage(message) {
     document.getElementById('outputText').innerText = message;
     document.getElementById('copyButton').style.display = "none";
-    document.getElementById('mensaje').style.display = "block"; // Mostrar la imagen
+    document.getElementById('mensaje').style.display = "block"; 
 }
 
 function showOutput(output) {
     document.getElementById('outputText').innerText = output;
     document.getElementById('copyButton').style.display = "block";
-    document.getElementById('mensaje').style.display = "none"; // Ocultar la imagen
+    document.getElementById('mensaje').style.display = "none"; 
 }
